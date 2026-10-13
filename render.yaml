@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: brass-plus-ext
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: AI_API_KEY
+        sync: false
+      - key: AI_API_BASE
+        sync: false
+      - key: AI_MODEL
+        sync: false
+      - key: MOD_PASSCODE
+        sync: false
+      - key: NG_WORDS
+        sync: false
+      - key: DATA_DIR
+        sync: false
