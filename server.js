@@ -271,3 +271,4 @@ app.listen(PORT, () => console.log('BRASS+ ext server listening on :' + PORT));
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
+app.get('/', (req, res) => { res.sendFile(path.join(__dirname, 'public', 'index.html')); });
