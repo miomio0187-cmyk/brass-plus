@@ -267,3 +267,7 @@ app.use('/api', api);
 app.use(express.static(path.join(__dirname, 'public')));
 app.get('*', (req, res) => res.sendFile(path.join(__dirname, 'public', 'index.html')));
 app.listen(PORT, () => console.log('BRASS+ ext server listening on :' + PORT));
+// ルート（トップページ）にアクセスがあったら public/index.html を返す
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
